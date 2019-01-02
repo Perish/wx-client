@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from '../assets/images/bg.jpeg';
+import bg from '../assets/images/bg5.jpeg';
 
 const LoginLayout = props => (
   <div style={{width: "100vw", height: "100vh"}}>
