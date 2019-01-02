@@ -1,10 +1,11 @@
 import React from 'react';
+import bg from '../assets/images/bg.jpeg';
 
 const LoginLayout = props => (
   <div style={{width: "100vw", height: "100vh"}}>
     <div style={{...styles.login}}>
       <div style={{flex: 1, position: "relative"}}>
-        <img src="https://images.unsplash.com/photo-1541690640907-41f82a701109?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=2734&q=80" alt="bag" style={{...styles.absolute}} />
+        <img src={bg} alt="bag" style={{...styles.absolute}} />
         <div style={{...styles.absolute, backgroundColor: "#000", opacity: "0.5"}}></div>
         <div style={{...styles.absolute,...styles.intro}}>
           <h2 style={{...styles.space}}>美好的一天</h2>
