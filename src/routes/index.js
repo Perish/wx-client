@@ -16,8 +16,7 @@ const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
 
 const routes = () => (
   <Switch>
-    {/* <AppRoute exact path="/" layout={MainLayout} component={Home} /> */}
-    <AppRoute exact path="/" layout={LoginLayout} component={Login} />
+    <AppRoute exact path="/" layout={MainLayout} component={Home} />
     <AppRoute exact path="/login" layout={LoginLayout} component={Login} />
     <AppRoute exact path="/signup" layout={LoginLayout} component={SignUp} />
   </Switch>

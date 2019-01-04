@@ -37,7 +37,7 @@ class SignUp extends Component {
           errors = JSON.parse(data.signUp.errors);
         }
         if(data && data.signUp && data.signUp.success) {
-          localStorage.setItem("success", "注册成功请登陆！！！")
+          localStorage.setItem("success", "注册成功请登陆！！！");
           return <Redirect to={'/login'} />
         }
         return (

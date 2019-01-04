@@ -7,9 +7,13 @@ import routes from './routes';
 import "./index.css";
 import * as serviceWorker from './serviceWorker';
 
+const token = localStorage.getItem('_ilike_cook');
 
 const client = new ApolloClient({
-  uri: "/graphql"
+  uri: "graphql",
+  headers: {
+    Authorization: token ? `Bearer ${token}` : ""
+  }
 });
 
 ReactDOM.render(

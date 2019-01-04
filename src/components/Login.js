@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
-import Link from 'react-router-dom/Link';
+import { Link, Redirect } from 'react-router-dom';
 import InputWithLabel from './InputWithLabel';
+import Message from './Message';
 
 const LOGIN = gql`
 mutation LOGIN($login: String!, $password: String!){
@@ -26,7 +27,11 @@ class Login extends Component {
     return(
       <Mutation mutation={LOGIN}>
         {(login, {loading, data, error}) => {
-        
+        if(data && data.login && data.login.token) {
+          localStorage.setItem("_ilike_cook", data.login.token);
+          localStorage.setItem("success", "登陆成功");
+          return <Redirect to={'/'} />
+        }
         return (
         <div style={{flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
           <div style={{ flex: 8, display: "flex", flexDirection:"row", alignItems: "center"}}>
@@ -40,7 +45,8 @@ class Login extends Component {
               }}
             >
               <h2 style={{marginBottom: "40px", textAlign: "center"}}>欢迎回来</h2>
-              {data && data.login && data.login.errors && <div className="alert alert-danger" role="alert"> {data.login.errors} </div>}
+              {data && data.login && data.login.errors && <Message status="danger" message={data.login.errors} /> }
+              {<Message status="success" type="ls" />}
               <InputWithLabel 
                 type="text"
                 name="login"
