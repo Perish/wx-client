@@ -1,7 +1,6 @@
 body {
   overflow: hidden;
 }
-
 a:focus, a:hover, a, a:visited {
   text-decoration: none;
 }

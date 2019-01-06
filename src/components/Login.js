@@ -65,7 +65,7 @@ class Login extends Component {
             </form>
           </div>
           <div style={{display: "flex", flexDirection: "row", flex: 1,  alignItems: "center"}}>
-            <Link to="/signup">还没用户，注册</Link>
+            <Link to="/sessions/signup">还没用户，注册</Link>
           </div>
         </div>
         )}}

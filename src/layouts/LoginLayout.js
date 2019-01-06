@@ -1,7 +1,10 @@
 import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Login from '../components/Login';
+import SignUp from '../components/SignUp';
 import bg from '../assets/images/bg5.jpeg';
 
-const LoginLayout = props => (
+const LoginLayout = ({children, match}) => (
   <div style={{width: "100vw", height: "100vh"}}>
     <div style={{...styles.login}}>
       <div style={{flex: 1, position: "relative"}}>
@@ -14,7 +17,12 @@ const LoginLayout = props => (
           <p>两个黄鹂鸣翠绿，一行白鹭上青天</p>
         </div>
       </div>
-      {props.children}      
+      {children}
+      <Switch>
+        <Route path={`${match.path}/login`} component={Login} />
+        <Route path={`${match.path}/signup`} component={SignUp} />
+        <Route render={() => <Redirect to={`${match.path}/login`} />} />
+      </Switch>
     </div>
   </div>
 );

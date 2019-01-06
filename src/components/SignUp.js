@@ -38,7 +38,7 @@ class SignUp extends Component {
         }
         if(data && data.signUp && data.signUp.success) {
           localStorage.setItem("success", "注册成功请登陆！！！");
-          return <Redirect to={'/login'} />
+          return <Redirect to={'/sessions/login'} />
         }
         return (
           <div style={{flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
@@ -98,7 +98,7 @@ class SignUp extends Component {
               </form>
             </div>
             <div style={{display: "flex", flexDirection: "row", flex: 1,  alignItems: "center"}}>
-              <Link to="/login">已有用户，登陆</Link>
+              <Link to="/sessions/login">已有用户，登陆</Link>
             </div>
           </div>
         )
