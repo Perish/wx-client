@@ -4,3 +4,12 @@ body {
 a:focus, a:hover, a, a:visited {
   text-decoration: none;
 }
+
+a {
+  color: rgba(0,0,0,0.5);
+}
+
+.paper {
+  padding: 15px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.2);
+}

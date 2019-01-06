@@ -71,9 +71,6 @@ class Login extends Component {
         )}}
       </Mutation>
 
-
-
-
     )
   }
 }

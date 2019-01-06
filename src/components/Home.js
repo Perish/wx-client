@@ -1,7 +1,7 @@
 import React from 'react';
 import Message from './Message';
 
-const Home = () => {
+export default () => {
   return (
     <div className="jumbotron">
       {<Message status="success" type="ls" />}
@@ -13,5 +13,3 @@ const Home = () => {
     </div>
   )
 }
-
-export default Home;

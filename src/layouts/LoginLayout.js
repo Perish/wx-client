@@ -1,10 +1,10 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import Login from '../components/Login';
 import SignUp from '../components/SignUp';
 import bg from '../assets/images/bg5.jpeg';
 
-const LoginLayout = ({children, match}) => (
+const LoginLayout = withRouter(({match}) => (
   <div style={{width: "100vw", height: "100vh"}}>
     <div style={{...styles.login}}>
       <div style={{flex: 1, position: "relative"}}>
@@ -17,7 +17,6 @@ const LoginLayout = ({children, match}) => (
           <p>两个黄鹂鸣翠绿，一行白鹭上青天</p>
         </div>
       </div>
-      {children}
       <Switch>
         <Route path={`${match.path}/login`} component={Login} />
         <Route path={`${match.path}/signup`} component={SignUp} />
@@ -25,7 +24,7 @@ const LoginLayout = ({children, match}) => (
       </Switch>
     </div>
   </div>
-);
+));
 
 
 const styles = {};
