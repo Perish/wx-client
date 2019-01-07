@@ -10,11 +10,6 @@ export default () => (
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <NavLink to="/" exact className="nav-link">首页 <span className="sr-only">(current)</span></NavLink>
-        </li>
-      </ul>
       <ul className="navbar-nav flex-row ml-md-auto d-md-flex">
       <AuthenticateNav />
       </ul>
