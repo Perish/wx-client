@@ -2,5 +2,10 @@
   "root": "build/",
   "routes": {
     "/**": "index.html"
+  },
+  "proxies": {
+    "/api/": {
+      "origin": "https://wx-ruby-server.herokuapp.com"
+    }
   }
 }
