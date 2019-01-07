@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 import { Link, Redirect } from 'react-router-dom';
 import InputWithLabel from './InputWithLabel';
-import Message from './Message';
+import Alert from './Alert';
 
 const LOGIN = gql`
 mutation LOGIN($login: String!, $password: String!){
@@ -45,8 +45,8 @@ class Login extends Component {
               }}
             >
               <h2 style={{marginBottom: "40px", textAlign: "center"}}>欢迎回来</h2>
-              {data && data.login && data.login.errors && <Message status="danger" message={data.login.errors} /> }
-              {<Message status="success" type="ls" />}
+              {data && data.login && data.login.errors && <Alert status="danger" message={data.login.errors} /> }
+              {<Alert status="success" type="ls" />}
               <InputWithLabel 
                 type="text"
                 name="login"

@@ -1,13 +1,13 @@
 import React from 'react';
 
-const InputWithLabel = ({type, name, labelName, error, placeholder, onChange}) => {
+const InputWithLabel = ({type, name, labelName, error, placeholder, helpmsg, onChange}) => {
   return (
     <div className="form-group">
       {labelName && <label htmlFor={name}>{labelName}</label>}
       <input 
         type={type} 
         name={name}
-        onChange={onChange} 
+        onChange={onChange}
         className={["form-control", error ? "is-invalid" : null].join(' ')}
         id={name}
         placeholder={placeholder}
@@ -16,6 +16,7 @@ const InputWithLabel = ({type, name, labelName, error, placeholder, onChange}) =
       <div className="invalid-feedback" style={{paddingLeft: "15px"}}>
         {error}
       </div>
+      { helpmsg && <small id="emailHelp" className="form-text text-muted">{helpmsg}</small>}
     </div>
   )
 }

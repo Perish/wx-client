@@ -1,10 +1,10 @@
 import React from 'react';
-import Message from './Message';
+import Alert from './Alert';
 
 export default () => {
   return (
     <div className="jumbotron">
-      {<Message status="success" type="ls" />}
+      {<Alert status="success" type="ls" />}
       <h1 className="display-4">欢迎回来！！！</h1>
       <p className="lead">赠人玫瑰，手有余香</p>
       <hr className="my-4" />

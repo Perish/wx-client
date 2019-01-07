@@ -19,12 +19,12 @@ const Links = [
     "routes" : [
     { "name" : "消息管理", "path" : "/messages"},
     { "name" : "用户管理", "path" : "/weixin_users"},
-    { "name" : "素材管理", "path" : "/appmsg"},]
+    { "name" : "素材管理", "path" : "/appmsgs"},]
   },
   {
     "name" : "设置",
     "icon" : "cog",
-    "routes" : [{ "name" : "基本设置", "path" : "/settings" }]
+    "routes" : [{ "name" : "基本配置", "path" : "/settings" }]
   }
 ]
 

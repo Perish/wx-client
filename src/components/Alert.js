@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Message = ({status, message, type = ""}) => {
+export default ({status, message, type = ""}) => {
   let msg = "";
   if(type === "ls") {
     msg = localStorage.getItem(status);
@@ -14,5 +14,3 @@ const Message = ({status, message, type = ""}) => {
     </div>
   )
 }
-
-export default Message;
