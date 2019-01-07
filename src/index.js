@@ -7,8 +7,10 @@ import "./index.css";
 import * as serviceWorker from './serviceWorker';
 import { getToken } from './utils';
 
+const URL = process.env.NODE_ENV === 'development' ? "/" : "https://wx-ruby-server.herokuapp.com/"
+
 const client = new ApolloClient({
-  uri: "/graphql",
+  uri: `${URL}graphql`,
   request: async operation => {
     const token = getToken();
     operation.setContext({
