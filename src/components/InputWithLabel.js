@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputWithLabel = ({type, name, labelName, error, placeholder, helpmsg, onChange}) => {
+const InputWithLabel = ({type, name, value, labelName, error, placeholder, helpmsg, onChange}) => {
   return (
     <div className="form-group">
       {labelName && <label htmlFor={name}>{labelName}</label>}
@@ -8,6 +8,7 @@ const InputWithLabel = ({type, name, labelName, error, placeholder, helpmsg, onC
         type={type} 
         name={name}
         onChange={onChange}
+        defaultValue={value}
         className={["form-control", error ? "is-invalid" : null].join(' ')}
         id={name}
         placeholder={placeholder}
